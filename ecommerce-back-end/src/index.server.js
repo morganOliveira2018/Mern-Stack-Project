@@ -11,7 +11,8 @@ const mongoose = require('mongoose');
 
 
 // routes
-const userRotes = require('./routes/user')
+const authRotes = require('./routes/auth');
+const adminRotes = require('./routes/admin/auth');
 // environment variable or you can say constants
 env.config();
 
@@ -32,7 +33,8 @@ mongoose.connect(
 
 // adicionar o middleware express-validator para validar os dados de entrada antes de solicitar
 app.use(express.json());
-app.use('/api', userRotes);
+app.use('/api', authRotes);
+app.use('/api', adminRotes);
 
 
 // app.get('/', (req, res, next) =>{
