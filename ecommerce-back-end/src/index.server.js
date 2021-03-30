@@ -13,6 +13,7 @@ const mongoose = require('mongoose');
 // routes
 const authRotes = require('./routes/auth');
 const adminRotes = require('./routes/admin/auth');
+const categoryRoutes = require('./routes/category');
 // environment variable or you can say constants
 env.config();
 
@@ -35,6 +36,7 @@ mongoose.connect(
 app.use(express.json());
 app.use('/api', authRotes);
 app.use('/api', adminRotes);
+app.use('/api', categoryRoutes);
 
 
 // app.get('/', (req, res, next) =>{

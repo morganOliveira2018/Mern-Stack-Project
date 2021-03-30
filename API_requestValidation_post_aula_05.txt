@@ -1,0 +1,44 @@
+POST => localhost:2000/api/signup
+
+JSON => 
+{
+	"firstName": "Morgana",
+	"lastName": "Ribeiro",
+	"email": "morganfrime@gmail.com",
+	"password": "12345"
+
+}
+
+OUTPUT: 
+{
+	"message": "User created Sucessfully...!"
+}
+
+POST => localhost:2000/api/signin
+
+JSON => 
+{
+	"email": "morganfrime@gmail.com",
+	"password": "12345"
+}
+
+OUTPUT: 
+{
+	"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
+	.eyJfa ...,
+	"user": {
+	"_id": "5f3044f48003bc61ac486fd26",
+	"firstName": "Morgana",
+	"lastName": "Ribeiro",
+	"email": "morganfrime@gmal.com",
+	"fullName": "Morgana Ribeiro"
+}
+
+POST => localhost:2000/api/admin/signin
+POST => localhost:2000/api/admin/signup
+
+=================================================================================
+Categories and Sub Categories Rest API
+1) Start \ecommerce-back-end:
+>> npm start
+2) Open project Visual Code 

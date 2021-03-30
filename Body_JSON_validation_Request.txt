@@ -1,0 +1,24 @@
+{
+	"errors": [
+	  {
+		"msg": "Primeiro Nome é necessário",
+		"param": "firstName",
+		"location": "body"
+	  },
+	  {
+		"msg": "Último Nome é necessário",
+		"param": "lastName",
+		"location": "body"
+	  },
+	  {	"msg": "Validação do email é necessário",
+		"param": "email",
+		"location": "body"
+	  },
+	  {
+ 		"msg": "Senha deve ter pelo menos 6 caracteres",
+		"param": "password",
+		"location": "body"
+	  }	
+   ]
+
+}
