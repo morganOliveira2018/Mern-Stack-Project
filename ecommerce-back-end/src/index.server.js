@@ -3,6 +3,7 @@ const express = require('express'); // npm install --save express express-valida
 const env = require('dotenv'); // npm install --save dotenv
 const app = express();
 const mongoose = require('mongoose');
+const path = require('path');
 // const bodyParser = express('body-parser');
 
 // comand server: node src/index.serverjs
@@ -14,6 +15,8 @@ const mongoose = require('mongoose');
 const authRotes = require('./routes/auth');
 const adminRotes = require('./routes/admin/auth');
 const categoryRoutes = require('./routes/category');
+const productRoutes = require('./routes/product');
+const cartRoutes = require('./routes/cart');
 // environment variable or you can say constants
 env.config();
 
@@ -34,10 +37,12 @@ mongoose.connect(
 
 // adicionar o middleware express-validator para validar os dados de entrada antes de solicitar
 app.use(express.json());
+app.use('/public', express.static(path.join(__dirname, 'uploads')));
 app.use('/api', authRotes);
 app.use('/api', adminRotes);
 app.use('/api', categoryRoutes);
-
+app.use('/api', productRoutes);
+app.use('/api', cartRoutes);
 
 // app.get('/', (req, res, next) =>{
 //     res.status(200).json({

@@ -7,4 +7,6 @@
 ### Dependências e plugins para instalar VScode
 - npm install react-bootstrap bootstrap --save
 - npm install react-router-dom --save
+- npm i multer --save
+- npm i shortid --save
 - Pesquisar via VsCode: react-snippests - coderreview_mustafa | v2.1.5
