@@ -1,0 +1,41 @@
+**Exemplo de criação de uma conta de um user**:
+
+POST => localhost:2000/api/signup
+
+{
+	"firstName": "Willame",
+	"lastName": "Ribeiro",
+	"email": "willame@gmail.com",
+	"password": "123456"
+}
+
+POST => localhost:2000/api/signin
+Body {
+	"email": "marcos@gmail.com",
+	"password": "marcos2019"
+}
+
+Response: 
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDE1ZWNlNmJmZmZiMzAyZjQzZGRkMjUiLCJyb2xlIjoidXNlciIsImlhdCI6MTYxODM1NTEzNCwiZXhwIjoxNjE4MzU4NzM0fQ.MFhO84Rmk72AXYLWGnoPc0r0fATBmusoiB9NwStQ2wA",
+    "user": {
+        "_id": "6015ece6bfffb302f43ddd25",
+        "firstName": "MArcos",
+        "lastName": "Costa",
+        "email": "marcos@gmail.com",
+        "role": "user",
+        "fullName": "MArcos Costa"
+    }
+}
+
+
+**Exemplo de criação de uma conta de admin**:
+
+POST => localhost:2000/api/admin/signup
+
+{
+	"firstName": "Musheer",
+	"lastName": "Kumar",
+	"email": "musheer@gmail.com",
+	"password": "123456"
+}

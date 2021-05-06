@@ -1,0 +1,38 @@
+Get => JSON/POSTMAN
+
+{
+    "categories": [
+        {
+            "_id": "60423f7278c01444d8d7eb8c",
+            "name": "Electrônicos",
+            "slug": "Electronicos",
+            "createdAt": "2021-03-05T14:25:54.033Z",
+            "updatedAt": "2021-03-05T14:25:54.033Z",
+            "__v": 0
+        },
+        {
+            "_id": "606c5477ef1a642f80979693",
+            "name": "Brinquedos",
+            "slug": "Brinquedos",
+            "createdAt": "2021-04-06T12:30:47.573Z",
+            "updatedAt": "2021-04-06T12:30:47.573Z",
+            "__v": 0
+        },
+        {
+            "_id": "606c5840ef1a642f80979694",
+            "name": "Esportes, livros e mais",
+            "slug": "Esportes-livros-e-mais",
+            "createdAt": "2021-04-06T12:46:56.472Z",
+            "updatedAt": "2021-04-06T12:46:56.472Z",
+            "__v": 0
+        },
+        {
+            "_id": "606c5b556d5e775bf469f27f",
+            "name": "Homens",
+            "slug": "Homens",
+            "createdAt": "2021-04-06T13:00:05.576Z",
+            "updatedAt": "2021-04-06T13:00:05.576Z",
+            "__v": 0
+        }
+    ]
+}
