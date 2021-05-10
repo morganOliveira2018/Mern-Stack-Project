@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import Layout from '../../components/Layout';
 import { Container, Form, Row, Col, Button } from 'react-bootstrap';
 import Input from '../../components/UI';
-import { isUserLoggedIn, login } from '../../actions';
+import { login } from '../../actions';
 import { useDispatch, useSelector } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 
@@ -20,13 +20,6 @@ const Signin = (props) => {
   const auth = useSelector(state => state.auth); // executará seu seletor sempre que uma ação for despachada
 
   const dispatch = useDispatch();
-
-  useEffect(() => {
-    if (!auth.authenticate) { // o usuário é autenticado sempre que for verdadeiro
-      dispatch(isUserLoggedIn()); // esse usuário já está logado?
-    }
-
-  }, []);
 
   const userLogin = (e) => {
 
