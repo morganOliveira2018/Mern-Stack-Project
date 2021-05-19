@@ -1,7 +1,7 @@
 import React from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { useSelector , useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { signout } from '../../actions';
 
 /**
@@ -15,7 +15,7 @@ const Header = (props) => {
   const dispatch = useDispatch();
 
   const logout = () => {
-      dispatch(signout());
+    dispatch(signout());
   }
 
   const renderLoggedLinks = () => {
@@ -28,6 +28,7 @@ const Header = (props) => {
     );
   }
 
+  /* essa funcao é retornada quando não esta logada, disponibilizando Signin e Signup */
   const renderNonLoggedInLinks = () => {
     return (
       <Nav>

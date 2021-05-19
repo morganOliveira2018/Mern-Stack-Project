@@ -23,6 +23,7 @@ const Layout = (props) => {
                   <li><NavLink to={`/pedidos`}>Pedidos</NavLink></li>
                 </ul>
               </Col>
+              {/* “md” para telas de 992px até 1200px  */}
               <Col md={10} style={{ marginLeft: 'auto' }}>
                 {props.children}
               </Col>

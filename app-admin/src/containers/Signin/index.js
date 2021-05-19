@@ -15,7 +15,6 @@ const Signin = (props) => {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
 
   const auth = useSelector(state => state.auth); // executará seu seletor sempre que uma ação for despachada
 
@@ -70,4 +69,4 @@ const Signin = (props) => {
 
 }
 
-export default Signin
+export default Signin;

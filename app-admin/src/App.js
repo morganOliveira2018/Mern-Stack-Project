@@ -17,7 +17,7 @@ function App() {
   const dispatch = useDispatch();
   const auth = useSelector(state => state.auth);
 
-  useEffect(() => {
+  useEffect(() => { // Hooks - React
     if (!auth.authenticate) { // o usuário é autenticado sempre que for verdadeiro
       dispatch(isUserLoggedIn()); // esse usuário já está logado?
     }
@@ -28,7 +28,8 @@ function App() {
   return (
     <div className="App">
       <Switch>
-        <PrivateRoute path='/' exact component={Home} />
+        {/* privateRoute pq só pode ser acessada após o signin */}
+        <PrivateRoute path='/' exact component={Home} /> 
         <PrivateRoute path='/produtos' component={Products} />
         <PrivateRoute path='/pedidos' component={Orders} />
         <Route path='/signin' component={Signin} />
