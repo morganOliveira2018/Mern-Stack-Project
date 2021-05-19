@@ -12,6 +12,7 @@ exports.requireSignin = (req, res, next ) => {
         return res.status(400).json({ message:'Authorization required' });
     }
     next();
+
 }
 
 exports.userMiddleware = (req, res, next) => {
