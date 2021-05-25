@@ -10,6 +10,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { isUserLoggedIn } from './actions';
 import Products from './containers/Products';
 import Orders from './containers/Orders';
+import Category from './containers/Category';
 // Signin and Signup are public routers 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
       <Switch>
         {/* privateRoute pq só pode ser acessada após o signin */}
         <PrivateRoute path='/' exact component={Home} /> 
+        <PrivateRoute path='/category' component={Category} />
         <PrivateRoute path='/produtos' component={Products} />
         <PrivateRoute path='/pedidos' component={Orders} />
         <Route path='/signin' component={Signin} />

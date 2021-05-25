@@ -17,6 +17,7 @@ const Home = (props) => {
                     <Col md={2} className="sidebar">
                     <ul>
                         <li><NavLink to={`/`}>Home</NavLink></li>
+                        <li><NavLink to={`/category`}>Categorias</NavLink></li>
                         <li><NavLink to={`/produtos`}>Produtos</NavLink></li>
                         <li><NavLink to={`/pedidos`}>Pedidos</NavLink></li>
                     </ul>
