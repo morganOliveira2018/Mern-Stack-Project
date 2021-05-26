@@ -2,6 +2,9 @@
   "name": "app-admin",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "12.10.0"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -12,6 +15,7 @@
     "react-bootstrap": "^1.4.3",
     "react-dom": "^17.0.1",
     "react-redux": "^7.2.4",
+    "react-responsive": "^8.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.2",
     "redux": "^4.1.0",

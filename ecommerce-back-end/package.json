@@ -4,7 +4,8 @@
   "description": "This is backend of ecommerce flipkart project \u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./src/index.server.js"
+    "start": "node ./src/index.server.js",
+    "dev": "nodemon ./src/index.server.js"
   },
   "keywords": [
     "ecommerce",

@@ -6,6 +6,18 @@ const initState = {
     error: null
 }
 
+/* buildNewCategories é uma funcao recursiva para atualizar os novos filhos que entram nas categorias */
+const buildNewCategories = (categories, category) => {
+    let myCategories = [];
+
+    for (let cat of categories) {
+        myCategories.push({
+            ...cat,
+            children: cat.children && cat.children.length > 0 ? buildNewCategories(cat.children, category) : []
+        });
+    }
+}
+
 export default (state = initState, action) => {
     switch (action.type) {
         case categoryConstants.GET_ALL_CATEGORIES_SUCCESS:

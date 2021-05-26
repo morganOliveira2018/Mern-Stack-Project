@@ -11,6 +11,7 @@ import { isUserLoggedIn } from './actions';
 import Products from './containers/Products';
 import Orders from './containers/Orders';
 import Category from './containers/Category';
+import './App.css';
 // Signin and Signup are public routers 
 
 function App() {
