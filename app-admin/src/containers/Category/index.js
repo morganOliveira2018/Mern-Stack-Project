@@ -60,6 +60,8 @@ const Category = (props) => {
                 createCategoryList(category.children, options)
             }
         }
+        /* console.log('options:', options);
+        console.log('categorias:', categories);*/
         return options;
     }
 
