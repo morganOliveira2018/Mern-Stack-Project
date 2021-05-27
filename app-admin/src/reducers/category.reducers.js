@@ -7,15 +7,30 @@ const initState = {
 }
 
 /* buildNewCategories é uma funcao recursiva para atualizar os novos filhos que entram nas categorias */
-const buildNewCategories = (categories, category) => {
+const buildNewCategories = (parentId, categories, category) => {
     let myCategories = [];
 
     for (let cat of categories) {
-        myCategories.push({
-            ...cat,
-            children: cat.children && cat.children.length > 0 ? buildNewCategories(cat.children, category) : []
-        });
+
+        if (cat._id == parentId) { /* Celular.id == ParentId */
+            myCategories.push({
+                ...cat,
+                children: cat.children && cat.children.length > 0 ? buildNewCategories(parentId, [...cat.children, {
+                    _id: category._id,
+                    name: category.name,
+                    slug: category.slug,
+                    parentId: category.parentId,
+                    children: category.children
+                }], category) : []
+            });
+        } else {
+            myCategories.push({
+                ...cat,
+                children: cat.children && cat.children.length > 0 ? buildNewCategories(parentId, cat.children, category) : []
+            });
+        }
     }
+    return myCategories;
 }
 
 export default (state = initState, action) => {
@@ -33,15 +48,23 @@ export default (state = initState, action) => {
                 loading: true
             }
             break;
-        case categoryConstants.ADD_NEW_CATEGORIES_SUCESS:
+        case categoryConstants.ADD_NEW_CATEGORIES_SUCCESS:
+            const category = action.payload.category;
+            console.log('action-payload-category', category);
+            const updatedCategories = buildNewCategories(category.parentId, state.categories, category);
+            /* console.log('updated categories', updatedCategories); */
+
             state = {
                 ...state,
-                loading: false
+                categories: updatedCategories,
+                loading: false,
             }
             break;
         case categoryConstants.ADD_NEW_CATEGORIES_FAILURE:
             state = {
-                ...initState
+                ...initState,
+                loading: false,
+                error: action.payload.error
             }
             break;
     }

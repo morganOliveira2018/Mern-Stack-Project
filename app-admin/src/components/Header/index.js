@@ -1,6 +1,6 @@
 import React from 'react';
-import { Navbar, Nav, Container } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
+/* import { Link } from 'react-router-dom';*/
 import { useSelector, useDispatch } from 'react-redux';
 import { signout } from '../../actions';
 
@@ -28,7 +28,7 @@ const Header = (props) => {
     );
   }
 
-  /* essa funcao é retornada quando não esta logada, disponibilizando Signin e Signup */
+  /* Essa funcao é retornada quando não esta logada, disponibilizando Signin e Signup */
   const renderNonLoggedInLinks = () => {
     return (
       <Nav>
@@ -42,18 +42,27 @@ const Header = (props) => {
     );
   }
 
-  return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" style={{ zIndex: 1 }}>
-      <Container fluid>
-        <Link href='/' className='navbar-brand'> Dashboard do Administrador </Link>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="mr-auto">
-          </Nav>
-          {auth.authenticate ? renderLoggedLinks() : renderNonLoggedInLinks()}
+  const renderMenuInLinks = () => {
+    return (
+      <>
+        <Nav.Link href={`/`}>Home</Nav.Link>
+        <Nav.Link href={`/category`}>Categorias</Nav.Link>
+        <Nav.Link href={`/produtos`}>Produtos</Nav.Link>
+        <Nav.Link href={`/pedidos`}>Pedidos</Nav.Link>
+      </>
+    );
+  }
 
-        </Navbar.Collapse>
-      </Container>
+  return (
+    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+      <Navbar.Brand href="#home">Dashboard do Administrador</Navbar.Brand>
+      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+      <Navbar.Collapse id="responsive-navbar-nav">
+        <Nav className="mr-auto">
+          {auth.authenticate ? renderMenuInLinks() : null}
+        </Nav>
+        {auth.authenticate ? renderLoggedLinks() : renderNonLoggedInLinks()}
+      </Navbar.Collapse>
     </Navbar>
   )
 }

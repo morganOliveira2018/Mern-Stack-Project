@@ -34,7 +34,7 @@ const Category = (props) => {
             parentCategoryId,
             categoryImage
         }; */
-        // console.log(cat);
+        /*console.log(cat);*/
         setShow(false);
     }
     const handleShow = () => setShow(true);
@@ -69,11 +69,11 @@ const Category = (props) => {
 
     return (
         <Layout sidebar>
-            <Container>
+            <Container fluid>
                 <Row>
                     <Col md={12}>
                         <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                            <h3>Categoria</h3>
+                            <h3>Categorias</h3>
                             <button onClick={handleShow} style={{ marginTop: '0.25rem', borderRadius: '5px' }}>Nova categoria</button>
                         </div>
                     </Col>

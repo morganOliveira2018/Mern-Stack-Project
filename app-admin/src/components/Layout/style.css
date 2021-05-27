@@ -22,37 +22,4 @@
   color: #fff;
 }
 
-@media (max-width: 770px) {
-  .sidebar {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    background-color: #eee;
-    padding-top: 60px;
-    box-shadow: inset 0 0 2px gray;
-    width: auto;
-    font-size: 3vw;
-  }
-  .sidebar ul li a {
-    display: block;
-    color: #333;
-    padding: 5px 10px;
-    box-sizing: border-box;
-    margin: 5px 0 5px 10px;
-    border-radius: 5px 0 0 5px; /* border-radius: top-left top-right bottom right bottom left */
-    text-decoration: none;
-  }
-  .sidebar ul li {
-    width: 100%;
-  }
-  .sidebar ul li a.active {
-    background: #333;
-    color: #fff;
-  }
-  .col-md-10 {
-    width: auto;  
-    font-size: 3vw;
-    padding-right: 3vw;
-  }
-}
+

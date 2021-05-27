@@ -5,6 +5,7 @@ import Input from '../../components/UI';
 import { login } from '../../actions';
 import { useDispatch, useSelector } from 'react-redux';
 import { Redirect } from 'react-router-dom';
+import Header from '../../components/Header';
 
 /**
 * @author
