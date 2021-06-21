@@ -1,5 +1,5 @@
 const Category = require('../models/category');
-const slugify = require('slugify');
+const slugify = require('slugify'); 
 
 // function that creates a nested list of categories with their respective subcategories (children)
 function createCategories(categories, parentId = null) {
@@ -18,7 +18,7 @@ function createCategories(categories, parentId = null) {
         categoryList.push({
             _id: cate._id,
             name: cate.name,
-            slug: cate.slug,
+            slug: cate.slug, 
             parentId: cate.parentId,
             children: createCategories(categories, cate._id)
         });

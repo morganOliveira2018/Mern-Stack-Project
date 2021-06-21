@@ -46,21 +46,6 @@ app.use('/api', categoryRoutes);
 app.use('/api', productRoutes);
 app.use('/api', cartRoutes);
 
-// app.get('/', (req, res, next) =>{
-//     res.status(200).json({
-//         message: 'Hello from Server'
-//     });    
-// });
-
-
-// // POST: utilizado quando queremos criar um recurso ou novo registro, cujos dados serão enviados no corpo(body) da requisição
-// app.post('/data', (req, res, next) =>{
-//     res.status(200).json({
-//         message: req.body
-//     });    
-// });
-
-
 // app.listen é para ouvir o servidor.
 app.listen(process.env.PORT, () => {
     console.log(`Server is running on port ${process.env.PORT}`); // interpolação

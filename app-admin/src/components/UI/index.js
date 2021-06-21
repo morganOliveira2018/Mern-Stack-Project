@@ -18,7 +18,7 @@ const Input = (props) => {
             />
             
             <Form.Text className="text-muted">
-                {props.errorMenssage}    
+                {props.errorMessage}    
             </Form.Text>
         </Form.Group>
     )

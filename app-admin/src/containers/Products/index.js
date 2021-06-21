@@ -124,13 +124,13 @@ const Products = (props) => {
                         type="file"
                         name="productPicture"
                         onChange={handleProductPictures}
-                        style={{ marginTop: '1rem'}}
+                        style={{ marginTop: '1rem' }}
                     />
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="primary" onClick={handleClose}>
                         Salvar
-                </Button>
+                    </Button>
                 </Modal.Footer>
             </Modal>
         </Layout>

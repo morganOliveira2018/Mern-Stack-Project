@@ -40,7 +40,6 @@ exports.addItemToCart = (req, res) => {
                     })
             } else {
                 /* if cart not exist then create a new cart */
-                console.log("Danone....")
                 const cart = new Cart({
                     user: req.user._id,
                     cartItems: [req.body.cartItems]
