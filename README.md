@@ -1,12 +1,43 @@
-# Mern-Stack-Project
+## 🧪 Tecnologias
 
-> Servidor Back-end rodando na port=2000
-> Servidor Front-end foi setado para rodar na port=4000
- 
+Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-### Dependências e plugins para instalar VScode
-- npm install react-bootstrap bootstrap --save
-- npm install react-router-dom --save
-- npm i multer --save
-- npm i shortid --save
-- Pesquisar via VsCode: react-snippests - coderreview_mustafa | v2.1.5
+- [ReactJS](https://reactjs.org)
+- [MongoDB](https://www.mongodb.com/)
+- [NodeJS](https://www.typescriptlang.org/)
+- [Express](https://expressjs.com/pt-br/)
+
+🚀 Como executar
+
+Clone o projeto e acesse a pasta do mesmo.
+
+```bash
+$ git clone https://github.com/morganOliveira2018/Mern-Stack-Project.git
+$ cd Mern-Stack-Project
+```
+
+Para iniciá-lo, siga os passos abaixo:
+```bash
+# Instalar as dependências
+$ npm
+```
+
+1) Para iniciar o front-end, basta entrar no cmd: cd Mern-Stack-Project/app-admin/
+```bash
+# Iniciar o front-end do projeto
+$ npm start
+```
+O app estará disponível no seu browser pelo endereço http://localhost:4000.
+
+2) Para iniciar o back-end, basta entrar em outro cmd: cd Mern-Stack-Project/ecommerce-back-end/
+```bash
+# Iniciar o back-end do projeto
+$ npm start
+``` 
+O servidor estará sendo executado no endereço http://localhost:2000.
+
+## 💻 Projeto
+
+O ecommerce Flipkart foi idealizado inicialmente um front-end que comanda o listagem, criação, deleção e atualização de produtos, categorias e subcategorias por parte do administrador. O back-end foi estruturado para atender inicialmente a aplicação específica para o admin. O front-end voltado para venda dos produtos para o usuário final está em desenvolvimento. 
+
+Este é um projeto encontra-se disponível em **[ecommerce-flipkart-admin](https://ecommerce-appadmin-mern.herokuapp.com/signin)**.
