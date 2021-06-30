@@ -42,7 +42,8 @@ O app estará disponível no seu browser pelo endereço http://localhost:4000.
 # Iniciar o back-end do projeto
 $ npm start
 ``` 
-O servidor estará sendo executado no endereço http://localhost:2000.
+O servidor estará sendo executado no endereço http://localhost:2000. 
+A hospedagem do servidor é fornecida pelo **[Heroku](https://id.heroku.com/login)**.
 
 ## 💻 Projeto
 
