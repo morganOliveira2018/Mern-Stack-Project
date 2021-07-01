@@ -14,6 +14,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - [MongoDB](https://www.mongodb.com/)
 - [NodeJS](https://www.typescriptlang.org/)
 - [Express](https://expressjs.com/pt-br/)
+- [React-bootstrap](https://react-bootstrap.github.io/)
 
 🚀 Como executar
 
